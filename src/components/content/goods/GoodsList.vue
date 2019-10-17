@@ -1,6 +1,9 @@
 <template>
-  <div class="goods">
-    <goods-list-item v-for="item in goods" :goods-item="item"/>
+  <div class="goods-list">
+    <goods-list-item
+            v-for="item in goods"
+            :goods-item="item" class="item">
+    </goods-list-item>
   </div>
 </template>
 
@@ -24,13 +27,14 @@
 </script>
 
 <style scoped>
-  .goods {
+  .goods-list {
     display: flex;
     flex-wrap: wrap;
+    padding: 5px;
     justify-content: space-around;
-
-    padding: 2px;
   }
 
-
+  .goods-list .item {
+    width: 48%;
+  }
 </style>
